@@ -1,0 +1,63 @@
+version: 2.1
+
+default_docker_image: &docker_image
+  docker:
+    - image: thecodingmachine/php:8.0-v4-apache
+      environment:
+        PROJECT_ROOT: "/home/docker/project"
+        PHP_EXTENSION_GD: 1
+        PHP_INI_MEMORY_LIMIT: 1g
+
+jobs:
+  # Test that coding standards fit drupal.org definitions.
+  coding_standards:
+    <<: *docker_image
+    steps:
+      - checkout
+      - run:
+          name: Fetch phpcs and dependencies
+          command: |
+            composer require drupal/coder
+            # Move vendor directory up a level as we don't want to code-check all of that.
+            mv vendor ../
+      - run:
+          name: Fetch phpcs convenience script
+          command: |
+            curl https://raw.githubusercontent.com/dof-dss/nidirect-drupal/development/phpcs.sh -o $PROJECT_ROOT/phpcs.sh
+            chmod +x $PROJECT_ROOT/phpcs.sh
+      - run:
+          name: PHPCS analysis
+          command: $PROJECT_ROOT/phpcs.sh ~/ "${PROJECT_ROOT}"
+
+  deprecated_code:
+    <<: *docker_image
+    steps:
+      - checkout:
+          path: ~/nicsdru_unity_profile
+      - run:
+          name: Fetch latest Drupal version
+          command: |
+            cd $PROJECT_ROOT
+            composer create-project drupal-composer/drupal-project:9.x-dev $PROJECT_ROOT --no-interaction
+      - run:
+          name: Download dependent contrib modules.
+          command: |
+            cd $PROJECT_ROOT
+            composer require --no-interaction mglaman/drupal-check
+      - run:
+          name: Move profile into position
+          command: |
+            mkdir -p $PROJECT_ROOT/web/profiles/custom
+            mv ~/nicsdru_unity_profile $PROJECT_ROOT/web/profiles/custom/
+      - run:
+          name: Deprecated code check
+          command: |
+            cd $PROJECT_ROOT/web
+            ../vendor/bin/drupal-check profiles/custom
+
+workflows:
+  version: 2
+  static_analysis:
+    jobs:
+      - coding_standards
+      - deprecated_code

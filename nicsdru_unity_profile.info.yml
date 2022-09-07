@@ -87,6 +87,7 @@ install:
   - origins_common
   - origins_media
   - origins_metatag
+  - origins_qa
   - origins_toc
   - origins_unique_title
   - origins_workflow
