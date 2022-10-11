@@ -47,6 +47,7 @@ install:
   - field_group
   - field_ui
   - file
+  - filelog
   - filter
   - flag
   - google_analytics
