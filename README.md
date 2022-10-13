@@ -2,7 +2,7 @@
 
 # DOF-DSS Unity Install Profile
 
-Custom install profile used by all Unity sites
+Custom install profile used by all Unity sites 
 
 ## Usage
 
