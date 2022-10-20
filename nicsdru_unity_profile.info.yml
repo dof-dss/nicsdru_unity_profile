@@ -63,6 +63,7 @@ install:
   - layout_builder
   - layout_discovery
   - link
+  - link_fix_absolute_urls
   - linkit
   - media
   - media_library
