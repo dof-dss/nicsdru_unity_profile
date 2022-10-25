@@ -47,6 +47,7 @@ install:
   - field_group
   - field_ui
   - file
+  - filelog
   - filter
   - flag
   - google_analytics
@@ -62,6 +63,7 @@ install:
   - layout_builder
   - layout_discovery
   - link
+  - link_fix_absolute_urls
   - linkit
   - media
   - media_library
