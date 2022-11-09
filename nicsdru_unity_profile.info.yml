@@ -51,6 +51,7 @@ install:
   - filter
   - flag
   - google_analytics
+  - google_tag
   - handy_cache_tags
   - help
   - history

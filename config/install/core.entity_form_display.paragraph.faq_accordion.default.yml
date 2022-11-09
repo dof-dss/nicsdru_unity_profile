@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.faq_accordian.field_answer
-    - field.field.paragraph.faq_accordian.field_question
-    - paragraphs.paragraphs_type.faq_accordian
+    - field.field.paragraph.faq_accordion.field_answer
+    - field.field.paragraph.faq_accordion.field_question
+    - paragraphs.paragraphs_type.faq_accordion
   module:
     - text
-id: paragraph.faq_accordian.default
+id: paragraph.faq_accordion.default
 targetEntityType: paragraph
-bundle: faq_accordian
+bundle: faq_accordion
 mode: default
 content:
   field_answer:
