@@ -5,7 +5,6 @@
 Custom install profile used by all Unity sites.
 
 ## Usage
-
 You can include this package into your project using composer:
 ```
 composer require dof-dss/nicsdru_unity_profile
