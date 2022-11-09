@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-id: faq_accordian
-label: 'FAQ accordian'
+id: faq_accordion
+label: 'FAQ accordion'
 icon_uuid: null
 icon_default: null
 description: ''

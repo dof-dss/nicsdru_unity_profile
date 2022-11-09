@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_answer
-    - paragraphs.paragraphs_type.faq_accordian
+    - paragraphs.paragraphs_type.faq_accordion
   module:
     - allowed_formats
     - text
@@ -15,10 +15,10 @@ third_party_settings:
     plain_text: '0'
 _core:
   default_config_hash: 6xN2ranEPKchPOE8-bDahlijOaSZ-XyUXXYdkmdJ2Ps
-id: paragraph.faq_accordian.field_answer
+id: paragraph.faq_accordion.field_answer
 field_name: field_answer
 entity_type: paragraph
-bundle: faq_accordian
+bundle: faq_accordion
 label: Answer
 description: ''
 required: true

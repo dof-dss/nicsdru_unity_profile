@@ -57,7 +57,7 @@ jobs:
 
 workflows:
   version: 2
-  static_analysis:
+  static-analysis:
     jobs:
       - coding_standards
       - deprecated_code
