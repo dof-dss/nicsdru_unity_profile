@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_question
-    - paragraphs.paragraphs_type.faq_accordian
-id: paragraph.faq_accordian.field_question
+    - paragraphs.paragraphs_type.faq_accordion
+id: paragraph.faq_accordion.field_question
 field_name: field_question
 entity_type: paragraph
-bundle: faq_accordian
+bundle: faq_accordion
 label: Question
 description: ''
 required: true

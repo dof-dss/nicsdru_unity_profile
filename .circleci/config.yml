@@ -55,4 +55,9 @@ jobs:
             cd $PROJECT_ROOT/web
             ../vendor/bin/drupal-check profiles/custom
 
-
+workflows:
+  version: 2
+  static-analysis:
+    jobs:
+      - coding_standards
+      - deprecated_code
