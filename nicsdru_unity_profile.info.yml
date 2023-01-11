@@ -116,6 +116,7 @@ install:
   - twig_tweak
   - ultimate_cron
   - unity_common
+  - unity_eu_cookie_compliance
   - unity_frontpage
   - unity_image_styles
   - unity_internal_link_checker
