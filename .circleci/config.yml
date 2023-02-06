@@ -43,7 +43,7 @@ jobs:
           name: Download dependent contrib modules.
           command: |
             cd $PROJECT_ROOT
-            composer require --no-interaction mglaman/drupal-check
+            composer require --no-interaction mglaman/drupal-check mglaman/phpstan-drupal:1.1.27
       - run:
           name: Move profile into position
           command: |
