@@ -48,6 +48,7 @@ install:
   - field_group
   - field_ui
   - file
+  - file_delete_ui
   - filelog
   - filter
   - flag
@@ -67,6 +68,7 @@ install:
   - link_fix_absolute_urls
   - linkit
   - media
+  - media_file_delete
   - media_library
   - media_library_edit
   - menu_admin_per_menu
