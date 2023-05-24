@@ -8,7 +8,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: NGKG12-hkY7Y2-hX2UGuZqMHNHdvG5652ZtyTryBWxQ
+  default_config_hash: 5O7FmAjd9YohoNXgOfyOB2kfR25IWO7vJ7L7qYSTafA
 id: node.faq.field_faq
 field_name: field_faq
 entity_type: node
@@ -33,3 +33,4 @@ settings:
         weight: 4
         enabled: false
 field_type: entity_reference_revisions
+
