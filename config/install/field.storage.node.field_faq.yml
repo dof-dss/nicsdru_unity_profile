@@ -1,4 +1,4 @@
-langcode: en
+langcode: und
 status: true
 dependencies:
   module:
@@ -6,7 +6,7 @@ dependencies:
     - node
     - paragraphs
 _core:
-  default_config_hash: galDCrzinVtPliHK4qlZGt5mi_-NE6tMLrxq2iZ-jeI
+  default_config_hash: S3Upem2GMIsJwHeBNg_N9SnU9tw4QQZma_wIjPjZAEs
 id: node.field_faq
 field_name: field_faq
 entity_type: node
