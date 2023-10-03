@@ -1,7 +1,7 @@
 name: NICS Unity
 type: profile
 description: To provide common functionality for various NICS Unity websites
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 distribution:
   name: unity
 install:
