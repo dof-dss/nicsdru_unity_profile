@@ -8,7 +8,6 @@ label: 'supervisor user'
 weight: 5
 is_admin: null
 permissions:
-  - 'access administration menu'
   - 'access administration pages'
   - 'access ckeditor link'
   - 'access content overview'
