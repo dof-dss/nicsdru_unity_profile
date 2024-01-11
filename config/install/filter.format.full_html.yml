@@ -1,18 +1,30 @@
+uuid: 40d0f2a0-63f4-43c9-a4de-0f7a8c960428
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.embed
+    - core.entity_view_mode.media.landscape_float
+    - core.entity_view_mode.media.landscape_float_xp
+    - core.entity_view_mode.media.landscape_full
+    - core.entity_view_mode.media.landscape_full_xp
+    - core.entity_view_mode.media.portrait_float
+    - core.entity_view_mode.media.portrait_float_xp
+    - core.entity_view_mode.media.portrait_full
   module:
+    - blazy
+    - ckeditor5_allowed_html
     - editor
     - entity_embed
     - media
     - noreferrer
+    - origins_common
     - token_filter
-    - unity_image_styles
+_core:
+  default_config_hash: Qz_ghgT5Z32QINhy2dM-vKWUVIO5psmUQ_w5oDQssW0
 name: 'Full HTML'
 format: full_html
 weight: 2
-roles:
-  - administrator
 filters:
   filter_align:
     id: filter_align
@@ -56,7 +68,7 @@ filters:
     status: false
     weight: -45
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <sup> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <p> <h1> <pre> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title>'
+      allowed_html: ''
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_escape:
@@ -85,11 +97,6 @@ filters:
     weight: -47
     settings:
       default_view_mode: embed
-      allowed_media_types:
-        audio: audio
-        image: image
-        remote_video: remote_video
-        video: video
       allowed_view_modes:
         embed: embed
         landscape_float: landscape_float
@@ -99,6 +106,10 @@ filters:
         portrait_float: portrait_float
         portrait_float_xp: portrait_float_xp
         portrait_full: portrait_full
+      allowed_media_types:
+        audio: audio
+        image: image
+        remote_video: remote_video
   noreferrer:
     id: noreferrer
     provider: noreferrer
@@ -112,3 +123,33 @@ filters:
     weight: -48
     settings:
       replace_empty: '1'
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: 3
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'
+  filter_allowed:
+    id: filter_allowed
+    provider: ckeditor5_allowed_html
+    status: false
+    weight: 0
+    settings:
+      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <sup> <blockquote> <a href> <ul> <ol start> <li> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
+      filter_html_help: '0'
+      filter_html_nofollow: '0'
+  origins_media_cookie_content_blocker_embed_filter:
+    id: origins_media_cookie_content_blocker_embed_filter
+    provider: origins_common
+    status: false
+    weight: 0
+    settings:
+      replacement_text: 'Click here to view the video content'
