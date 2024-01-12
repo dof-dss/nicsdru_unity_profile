@@ -4,6 +4,7 @@ description: To provide common functionality for various NICS Unity websites
 core_version_requirement: ^8.8 || ^9 || ^10
 distribution:
   name: unity
+  langcode: en
 install:
   - address
   - admin_toolbar
@@ -15,7 +16,11 @@ install:
   - block
   - block_content
   - breakpoint
-  - ckeditor
+  - ckeditor5
+  - ckeditor5_allowed_html
+  - ckeditor5_premium_features
+  - ckeditor5_premium_features_fullscreen
+  - ckeditor5_premium_features_import_word
   - clientside_validation
   - clientside_validation_jquery
   - clone_nodes
