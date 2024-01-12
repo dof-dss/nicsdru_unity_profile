@@ -4,6 +4,7 @@ description: To provide common functionality for various NICS Unity websites
 core_version_requirement: ^8.8 || ^9 || ^10
 distribution:
   name: unity
+  langcode: en
 install:
   - address
   - admin_toolbar
