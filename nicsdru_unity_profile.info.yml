@@ -146,6 +146,5 @@ dependencies:
   - admin_toolbar_links_access_filter
   - address
 themes:
-  - adminimal_theme
   - nicsdru_unity_theme
   - stark
