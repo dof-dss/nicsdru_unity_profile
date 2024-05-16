@@ -1,21 +1,19 @@
-uuid: 7dfa11f0-32f7-44b3-842b-31679cbae006
+uuid: f4e7675b-b98b-418e-be6f-04511ee879d2
 langcode: en
 status: true
 dependencies:
   module:
-    - scheduled_transitions
-_core:
-  default_config_hash: z3fm0cL_TxoeTbw7lKGaHQwzdWoZfsPz9oItnI8q0EI
+    - filelog
 title: 'Default cron handler'
-id: scheduled_transitions_cron
-weight: -6
-module: scheduled_transitions
-callback: scheduled_transitions_cron
+id: filelog_cron
+weight: -9
+module: filelog
+callback: filelog_cron
 scheduler:
   id: simple
   configuration:
     rules:
-      - '* * * * *'
+      - '*/5+@ * * * *'
 launcher:
   id: serial
   configuration:

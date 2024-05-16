@@ -1,21 +1,19 @@
-uuid: 7dfa11f0-32f7-44b3-842b-31679cbae006
+uuid: 3b881cfd-b731-4bdb-85b1-89116f1498da
 langcode: en
 status: true
 dependencies:
   module:
-    - scheduled_transitions
-_core:
-  default_config_hash: z3fm0cL_TxoeTbw7lKGaHQwzdWoZfsPz9oItnI8q0EI
+    - webform
 title: 'Default cron handler'
-id: scheduled_transitions_cron
-weight: -6
-module: scheduled_transitions
-callback: scheduled_transitions_cron
+id: webform_cron
+weight: -2
+module: webform
+callback: webform_cron
 scheduler:
   id: simple
   configuration:
     rules:
-      - '* * * * *'
+      - '0+@ * * * *'
 launcher:
   id: serial
   configuration:

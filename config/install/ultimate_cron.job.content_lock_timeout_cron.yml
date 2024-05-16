@@ -1,21 +1,19 @@
-uuid: 7dfa11f0-32f7-44b3-842b-31679cbae006
+uuid: 61e25bf7-f061-4f02-b35b-153d6b4aa4cb
 langcode: en
 status: true
 dependencies:
   module:
-    - scheduled_transitions
-_core:
-  default_config_hash: z3fm0cL_TxoeTbw7lKGaHQwzdWoZfsPz9oItnI8q0EI
+    - content_lock_timeout
 title: 'Default cron handler'
-id: scheduled_transitions_cron
-weight: -6
-module: scheduled_transitions
-callback: scheduled_transitions_cron
+id: content_lock_timeout_cron
+weight: 1
+module: content_lock_timeout
+callback: content_lock_timeout_cron
 scheduler:
   id: simple
   configuration:
     rules:
-      - '* * * * *'
+      - '0+@ * * * *'
 launcher:
   id: serial
   configuration:
