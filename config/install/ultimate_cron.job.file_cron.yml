@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   module:
-    - scheduled_transitions
-_core:
-  default_config_hash: z3fm0cL_TxoeTbw7lKGaHQwzdWoZfsPz9oItnI8q0EI
-title: 'Default cron handler'
-id: scheduled_transitions_cron
-weight: -6
-module: scheduled_transitions
-callback: scheduled_transitions_cron
+    - file
+title: 'Deletes temporary files'
+id: file_cron
+weight: -1
+module: file
+callback: file_cron
 scheduler:
-  id: simple
+  id: crontab
   configuration:
     rules:
-      - '* * * * *'
+      - '5 4 * * *'
+    catch_up: 0
 launcher:
   id: serial
   configuration:

@@ -2,19 +2,18 @@ langcode: en
 status: true
 dependencies:
   module:
-    - scheduled_transitions
-_core:
-  default_config_hash: z3fm0cL_TxoeTbw7lKGaHQwzdWoZfsPz9oItnI8q0EI
+    - layout_builder
 title: 'Default cron handler'
-id: scheduled_transitions_cron
-weight: -6
-module: scheduled_transitions
-callback: scheduled_transitions_cron
+id: layout_builder_cron
+weight: -8
+module: layout_builder
+callback: layout_builder_cron
 scheduler:
-  id: simple
+  id: crontab
   configuration:
     rules:
-      - '* * * * *'
+      - '5 3 * * *'
+    catch_up: 0
 launcher:
   id: serial
   configuration:
